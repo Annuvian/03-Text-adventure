@@ -1,51 +1,250 @@
 {
-    "verbs": [
-      { "v": "EXITS",   "map": "EXITS" },
-      { "v": "QUIT",    "map": "QUIT"  },
-      { "v": "NORTH",   "map": "NORTH" },
-      { "v": "N",       "map": "NORTH" },
-      { "v": "SOUTH",   "map": "SOUTH" },
-      { "v": "S",       "map": "SOUTH" },
-      { "v": "EAST",    "map": "EAST"  },
-      { "v": "E",       "map": "EAST"  },
-      { "v": "WEST",    "map": "WEST"  },
-      { "v": "W",       "map": "WEST"  }
-    ],
+  "verbs": [
+    {
+      "v": "EXITS",
+      "map": "EXITS"
+    },
+    {
+      "v": "QUIT",
+      "map": "QUIT"
+    },
+    {
+      "v": "NORTH",
+      "map": "NORTH"
+    },
+    {
+      "v": "SOUTH",
+      "map": "SOUTH"
+    },
+    {
+      "v": "EAST",
+      "map": "EAST"
+    },
+    {
+      "v": "WEST",
+      "map": "WEST"
+    },
+    {
+      "v": "Talk",
+      "map": "Talk"
+    }
+  ],
 
-    "rooms": {
-      "START": {
-        "name": "Starting place",
-        "desc": "This is the place to start!",
-        "exits": [
-          {
-            "verb": "NORTH",
-            "target": "LOC2",
-            "condition": ""
-          },
-          {
-            "verb": "SOUTH",
-            "target": "LOC2",
-            "condition": ""
-          },
-          {
-            "verb": "WEST",
-            "target": "LOC2",
-            "condition": ""
-          },
-          {
-            "verb": "EAST",
-            "target": "LOC2",
-            "condition": ""
-          }
-        ],
-        "inventory": []
-      },
-      "LOC2": {
-        "name": "Location 2",
-        "desc": "Here is the second location.",
-        "exits": [
-        ],
-        "inventory": []
-      }
+  "rooms": {
+    "START": {
+      "name": "Forest Clearing",
+      "desc": "You wake up in the middle of a forest clearing.",
+      "exits": [
+        {
+          "verb": "NORTH",
+          "target": "CAVE",
+          "condition": ""
+        },
+        {
+          "verb": "SOUTH",
+          "target": "CAMP",
+          "condition": ""
+        },
+        {
+          "verb": "EAST",
+          "target": "FOREST",
+          "condition": ""
+        },
+        {
+          "verb": "WEST",
+          "target": "FIELD",
+          "condition": ""
+        }
+      ],
+      "inventory": []
+    },
+    "CAVE": {
+      "name": "Cave Entrance",
+      "desc": "You emerge from the treeline and see a small opening to a cave hidden amongst the rocks to the North. You hear a low growl coming from inside the cave.",
+      "exits": [
+        {
+          "verb": "NORTH",
+          "target": "ENTERCAVE",
+          "condition": ""
+        },
+        {
+          "verb": "SOUTH",
+          "target": "START",
+          "condition": ""
+        },
+        {
+          "verb": "EAST",
+          "target": "SWAMP",
+          "condition": ""
+        },
+        {
+          "verb": "WEST",
+          "target": "MINE",
+          "condition": ""
+        }
+      ],
+      "inventory": []
+    },
+    "SWAMP": {
+      "name": "Marshlands",
+      "desc": "Ahead of you to the East is a vast marshland. Mist swirls hauntingly above the ground, obscuring your vision greatly. The smell of decaying plantlife and primordial ooze is almost too much to handle.",
+      "exits": [
+        {
+          "verb": "EAST",
+          "target": "VICTORY",
+          "condition": ""
+        },
+        {
+          "verb": "SOUTH",
+          "target": "FOREST",
+          "condition": ""
+        },
+        {
+          "verb": "WEST",
+          "target": "CAVE",
+          "condition": ""
+        }
+      ],
+      "inventory": []
+    },
+    "MINE": {
+      "name": "Mineshaft",
+      "desc": "Ahead of you to the West is a long lost mineshaft descending into the depths of the Earth.",
+      "exits": [
+        {
+          "verb": "EAST",
+          "target": "CAVE",
+          "condition": ""
+        },
+        {
+          "verb": "SOUTH",
+          "target": "FIELD",
+          "condition": ""
+        },
+        {
+          "verb": "WEST",
+          "target": "ENTERMINE",
+          "condition": ""
+        }
+      ],
+      "inventory": []
+    },
+    "FIELD": {
+      "name": "Grassy Field",
+      "desc": "Ahead of you to the West is a long sprawling field of tall grass. Large clouds stretch across the sky, you can make out the shadow of something above the sky moving about.",
+      "exits": [
+        {
+          "verb": "NORTH",
+          "target": "MINE",
+          "condition": ""
+        },
+        {
+          "verb": "SOUTH",
+          "target": "CAMP",
+          "condition": ""
+        },
+        {
+          "verb": "EAST",
+          "target": "START",
+          "condition": ""
+        },
+        {
+          "verb": "WEST",
+          "target": "ENTERFIELD",
+          "condition": ""
+        }
+      ],
+      "inventory": []
+    },
+    "FOREST": {
+      "name": "Dark Forest",
+      "desc": "Ahead of you to the East is a forest so dark that the light from above barely penetrates the canopy. The sounds of wildlife is almost deafening.",
+      "exits": [
+        {
+          "verb": "NORTH",
+          "target": "SWAMP",
+          "condition": ""
+        },
+        {
+          "verb": "SOUTH",
+          "target": "CAMP",
+          "condition": ""
+        },
+        {
+          "verb": "EAST",
+          "target": "ENTERSWAMP",
+          "condition": ""
+        },
+        {
+          "verb": "WEST",
+          "target": "START",
+          "condition": ""
+        }
+      ],
+      "inventory": []
+    },
+    "CAMP": {
+      "name": "Bandit Camp",
+      "desc": "Ahead of you to the South is a small bandit camp. There is one tent and a small fire, at first glance you do not notice any activity in the camp.",
+      "exits": [
+        {
+          "verb": "NORTH",
+          "target": "START",
+          "condition": ""
+        },
+        {
+          "verb": "SOUTH",
+          "target": "ENTERCAMP",
+          "condition": ""
+        },
+        {
+          "verb": "EAST",
+          "target": "FOREST",
+          "condition": ""
+        },
+        {
+          "verb": "WEST",
+          "target": "FIELD",
+          "condition": ""
+        }
+      ],
+      "inventory": []
+    },
+    "ENTERCAMP": {
+      "name": "Inside Bandit Camp",
+      "desc": "You enter the bandit camp and walk over to the tent. When you pull back the tarp a bandit lunges out and pierces your heart with his rapier. That looks lethal.",
+      "exits": [],
+      "inventory": []
+    },
+    "ENTERFOREST": {
+      "name": "Inside the Forest",
+      "desc": "You march deep into the forest, it finally gets so dark you completely lose your way and get lost. A panther leaps from the darkness and tears you to shreds. Needless to say, you are dead.",
+      "exits": [],
+      "inventory": []
+    },
+    "ENTERFIELD": {
+      "name": "Inside the Field",
+      "desc": "You stroll into the tall grass. Several minutes later a large dragon swoops out of the sky and devours you. Sucks to be you.",
+      "exits": [],
+      "inventory": []
+    },
+    "VICTORY": {
+      "name": "Into the Swamp",
+      "desc": "You brave your way into the swamp. After many hours of hard going through the wet soupy ground, you emerge on the other side. Congratulations, you life to fight another day.",
+      "exits": [],
+      "inventory": []
+    },
+    "ENTERCAVE": {
+      "name": "Inside the Cave",
+      "desc": "You enter the cave and are quickly eaten by a cave troll. That's a darn shame.",
+      "exits": [],
+      "inventory": []
+    },
+    "ENTERMINE": {
+      "name": "Inside the Mine",
+      "desc": "You descend down into the mine. You slip on some wet rock and fall down the shaft to your death. Ouch, too bad.",
+      "exits": [],
+      "inventory": []
     }
   }
+}
