@@ -1,0 +1,39 @@
+Name:Nolan McIntire
+Date:9/28/19
+Project: Text Adventure
+Peer's repository:Annuvian/Robbie
+
+
+
+What is something you learned by reviewing your peer's project?
+didn't see much new code
+ 
+
+What is something you saw in your peer's project that you would like to apply to your own programming projects?
+I should be a little more creative in my descriptions
+ 
+
+What suggestions would you have for your peer to improve his/her code?
+
+ When moving into a death spot,when you die the game does not end but you can't go any where else forcing the user to close the game and restart
+
+What could have been clearer or better commented?
+
+ the goal of the game
+
+Was there anything in the code that was confusing to you? If so, what?
+
+ nothing I saw was confusing
+
+Does the repository contain an appropriate LICENSE?
+
+ It does 
+
+What is something he/she could add to the README.md to make it more descriptive?
+
+ It could say whether or not they added something or left it how it was
+
+Pay a compliment to your peer based on the quality of his/her code.
+The descriptions of the locations and outcomes of going into the locations were entertaining
+
+
